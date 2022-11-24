@@ -57,9 +57,9 @@ public class Main {
         Store store = new Store(1000);
 
         new Thread(new Producer(store), "Producer1").start();
-        new Thread(new Producer(store), "Producer1").start();
+        //new Thread(new Producer(store), "Producer1").start();
         new Thread(new Consumer(store), "Consumer1").start();
-        //new Thread(new Consumer(store), "Consumer2").start();
-        //new Thread(new Consumer(store), "Consumer3").start();
+        new Thread(new Consumer(store), "Consumer2").start();
+        new Thread(new Consumer(store), "Consumer3").start();
     }
 }
